@@ -3,29 +3,44 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-thumb-red-600 !scrollbar-track-transparent;
-    }
-    header {
-        @apply fixed top-0 z-50 flex w-full items-center justify-between p-4 transition-all lg:py-6
-    }
+  body {
+    @apply bg-[#141414] text-white !scrollbar-thin !scrollbar-thumb-red-600 !scrollbar-track-transparent;
+  }
+  header {
+    @apply fixed top-0 z-50 flex w-full items-center justify-between p-4 transition-all lg:py-6;
+  }
 }
 @layer components {
-    .HeaderLink {
-        @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition-all duration-500
+  .HeaderLink {
+    @apply cursor-pointer text-sm font-light text-[#e5e5e5] transition-all duration-500
         hover:text-[#b3b3b3];
-    }
-    .bannerButton {
-        @apply flex items-center gap-x-2 rounded px-5 py-1 text-sm font-semibold transition hover:opacity-75 md:py-2 md:px-8 md:text-xl;
-    }
+  }
+  .bannerButton {
+    @apply flex items-center gap-x-2 rounded px-5 py-1 text-sm font-semibold transition hover:opacity-75 md:py-2 md:px-8 md:text-xl;
+  }
 
-    .input {
-        @apply w-full rounded bg-[#333] px-5 py-3.5 outline-none placeholder-slate-200 font-semibold text-lg focus:bg-[#454545]
-    }
+  .input {
+    @apply w-full rounded bg-[#333] px-5 py-3.5 outline-none placeholder-slate-200 font-semibold text-lg focus:bg-[#454545];
+  }
 
-    .modalButton {
-        @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[gray]
-        bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10
-    }
+  .modalButton {
+    @apply flex h-11 w-11 items-center justify-center rounded-full border-2 border-[gray]
+        bg-[#2a2a2a]/60 transition hover:border-white hover:bg-white/10;
+  }
+  /* MUI Menu */
+  .menu {
+    @apply md:hidden;
+  }
+
+  .menu .MuiPaper-root {
+    @apply !absolute !left-0 !rounded-none !border !border-[gray] !bg-black !text-white;
+  }
+
+  .menu .MuiList-root {
+    @apply !p-0;
+  }
+
+  .menu .MuiMenuItem-root {
+    @apply !block !w-72 !py-3.5 !text-center !text-sm !font-light !text-[#b3b3b3] !transition !duration-200 first:cursor-default first:!font-normal first:!text-white hover:!bg-[#11100F];
+  }
 }
-
